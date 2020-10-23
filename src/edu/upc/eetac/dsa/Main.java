@@ -7,12 +7,38 @@ public class Main {
         System.out.println("\t\t\t\t\t\t QUEUE GESTOR");
 
         try {
+            System.out.println("STARTING AT " + iq);
             iq.push(1);
+            System.out.println("FULL QUEUE " + iq);
+            iq.push(2);
+            System.out.println("FULL QUEUE " + iq);
+            iq.push(3);
+            System.out.println("FULL QUEUE " + iq);
+            iq.push(4);
+            System.out.println("FULL QUEUE " + iq);
+            iq.push(5);
+            System.out.println("FULL QUEUE " + iq);
+            iq.push(6);
+            System.out.println("FULL QUEUE " + iq);
+            System.out.println("SIZE " + iq.size());
+            //throw push exception
+            iq.push(7);
 
-            int p = iq.pop();
-            System.out.println(p);
-
-            p = iq.pop();
+            iq.pop();
+            System.out.println("FULL QUEUE " + iq);
+            iq.pop();
+            System.out.println("FULL QUEUE " + iq);
+            iq.pop();
+            System.out.println("FULL QUEUE " + iq);
+            iq.pop();
+            System.out.println("FULL QUEUE " + iq);
+            iq.pop();
+            System.out.println("FULL QUEUE " + iq);
+            iq.pop();
+            System.out.println("FULL QUEUE " + iq);
+            System.out.println("SIZE " + iq.size());
+            //throw pop exception
+            //iq.pop();
 
         } catch(FullQueueException full){
             full.printStackTrace();

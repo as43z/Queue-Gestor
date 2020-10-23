@@ -46,10 +46,19 @@ public class QueueInter<T> implements Queue<T>{
     }
 
     public void shiftToLeft(){
-        for(int i = 0; i < this.nElements; i++) {
+        for(int i = 0; i < this.nElements - 1; i++) {
             this.arData[i] = this.arData[i + 1];
         }
-        this.arData[this.nElements] = null;
         this.nElements--;
+        this.arData[this.nElements] = null;
+    }
+
+    @Override
+    public String toString(){
+        String mes = "[";
+        for(int i = 0; i < this.ilen; i++){
+            mes += this.arData[i] + ",";
+        }
+        return mes + "]";
     }
 }
